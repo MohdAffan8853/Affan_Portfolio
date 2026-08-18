@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: rgba(247, 239, 228, 0.78);
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-strong: #ffffff;
+  --surface-muted: #f4e7d8;
+  --text: #000000;
+  --muted: #1a1a1a;
+  --border: rgba(23, 32, 51, 0.1);
+  --primary: #ff7a59;
+  --secondary: #3b82f6;
+  --accent: #f5b942;
+  --success: #16a34a;
+  --solid-button-bg: #172033;
+  --solid-button-text: #ffffff;
+  --page-background:
+    radial-gradient(circle at top left, rgba(255, 122, 89, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent 40%);
+  --hero-overlay:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.75), transparent 32%),
+    radial-gradient(circle at 80% 15%, rgba(59, 130, 246, 0.18), transparent 22%);
+  --font-sans: "Trebuchet MS", "Aptos", "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+html.dark {
+  --bg: #09111f;
+  --surface: rgba(13, 23, 40, 0.82);
+  --surface-strong: #101b2f;
+  --surface-muted: #0d1627;
+  --text: #f8fafc;
+  --muted: #d4deec;
+  --border: rgba(148, 163, 184, 0.18);
+  --primary: #ff8f6d;
+  --secondary: #60a5fa;
+  --accent: #facc15;
+  --success: #22c55e;
+  --solid-button-bg: #f8fafc;
+  --solid-button-text: #09111f;
+  --page-background:
+    radial-gradient(circle at top left, rgba(255, 143, 109, 0.08), transparent 24%),
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(5, 10, 20, 0.1), rgba(5, 10, 20, 0.52) 42%);
+  --hero-overlay:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(96, 165, 250, 0.16), transparent 22%),
+    linear-gradient(135deg, rgba(8, 14, 25, 0.12), rgba(8, 14, 25, 0.46));
+  --font-sans: "Aptos", "Segoe UI Variable Text", "Segoe UI", "Trebuchet MS", sans-serif;
+  --font-display:
+    "Aptos Display",
+    "Segoe UI Variable Display",
+    "Aptos",
+    "Segoe UI Variable Text",
+    "Trebuchet MS",
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  @apply bg-[var(--bg)] text-[var(--text)] antialiased;
+  background-image: var(--page-background);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-synthesis: none;
+}
+
+html.dark body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+::selection {
+  background: rgba(255, 122, 89, 0.22);
+}
+
+.glass-panel {
+  @apply border border-[var(--border)] bg-[var(--surface)] backdrop-blur-xl;
+}
+
+.section-shell {
+  @apply relative scroll-mt-24 py-14 sm:py-16;
+}
+
+.pill-button {
+  @apply inline-flex items-center rounded-full border border-[var(--border)] px-4 py-2 text-sm font-semibold transition-all duration-300;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-float {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+.pulse-ring {
+  animation: pulseRing 2.8s ease-in-out infinite;
+}
+
+.fade-slide {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes pulseRing {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 89, 0.28);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(255, 122, 89, 0);
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
