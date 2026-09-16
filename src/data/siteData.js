@@ -28,6 +28,8 @@ import workOne from "../../layout/images/work/img-1.png";
 import workTwo from "../../layout/images/work/img-2.png";
 import workThree from "../../layout/images/work/img-3.png";
 import workFour from "../../layout/images/work/img-4.png";
+import workFive from "../../layout/images/work/img-5.png";
+import workSix from "../../layout/images/work/img-6.png";
 import { GrGithub } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 import { BsBarChartLineFill, BsFileExcel } from "react-icons/bs";
@@ -41,11 +43,11 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com/", icon: GrGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/mohd-raiyan-b96868348/", icon: FaLinkedinIn },
+  { label: "GitHub", href: "https://github.com/MohdAffan8853", icon: GrGithub },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/affankhan885313/", icon: FaLinkedinIn },
   { label: "X", href: "https://x.com/MohdR68251", icon: FaXTwitter },
-  { label: "Instagram", href: "https://www.instagram.com/raiyan_k47/", icon: FaInstagram },
-  { label: "Email", href: "mohdraiyan68@gmail.com", icon: MdEmail },
+  { label: "Instagram", href: "https://www.instagram.com/ite_unknownn/", icon: FaInstagram },
+  { label: "Email", href: "affankhan885313@gmail.com", icon: MdEmail },
 ];
 
 export const heroContent = {
@@ -130,7 +132,7 @@ export const aboutProfileCard = {
     { label: "Experience", value: "1+ Year" },
   ],
   cvLabel: "Download CV",
-  cvHref: "/Affankhan_DA.pdf",
+  cvHref: "/MD_Affan_M.pdf",
 };
 
 export const projects = [
@@ -146,11 +148,37 @@ export const projects = [
     githubUrl: "https://github.com/MohdAffan8853/Zepto_Dataset_Analysis",
     liveUrl: "#",
   },
+  {
+    title: "Bank Marketing Analysis Dashboard",
+    image: workThree,
+    githubUrl: "https://github.com/MohdAffan8853/Bank-Marketing-Analysis-Dashboard",
+    liveUrl: "#",
+  },
+  {
+    title: "Salary Prediction ML Web App",
+    image: workFour,
+    githubUrl: "https://github.com/MohdAffan8853/salary-prediction-ml-web-app",
+    liveUrl: "salarypredictionml.netlify.app",
+  },
+  {
+    title: "Cookies Sales Performance Dashboard",
+    image: workFive,
+    githubUrl: "https://github.com/MohdAffan8853/Cookies-Sales-Performance-Dashboard",
+    liveUrl: "#",
+  },
+   {
+    title: "SuperMarket Sales Performance Dashboard",
+    image: workSix,
+    githubUrl: "https://github.com/MohdAffan8853/Supermarket-Sales-Performance-Dashboard",
+    liveUrl: "#",
+  },
 ];
 
 export const workItems = [
-  { image: workOne, title: "Web Design", category: "E-Commerce" },
-  { image: workTwo, title: "NFT Web Design", category: "NFT Marketplace" },
+  { image: workFour, title: "Web Design App", category: "Salary Prediction" },
+  { image: workTwo, title: "Analysis Dashboard", category: "NFT Marketplace" },
+  { image: workOne, title: "Analysis Dashboard", category: "Marketplace Analysis" },
+  { image: workFive, title: "Analysis Dashboard", category: "Sales Analysis" },
 ];
 
 export const contactDetails = [
