@@ -8,19 +8,16 @@ import {
 } from "react-icons/fi";
 import {
   FaDatabase,
-  FaFileExcel,
   FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
 import {
   SiCss,
-  SiDjango,
   SiGithub,
   SiHtml5,
   SiJavascript,
   SiPython,
-  SiReact,
   SiScikitlearn,
 } from "react-icons/si";
 import heroOne from "../../layout/images/home/home.png";
