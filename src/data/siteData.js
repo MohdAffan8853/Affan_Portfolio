@@ -54,7 +54,7 @@ export const heroContent = {
   accent: "text-amber-500",
   button: "bg-amber-400/15 text-amber-600 ring-amber-400/40",
   image: heroOne,
-  titles: ["Data Analyst", "Data Scientist"],
+  titles: ["Data Analyst", "Mis Executive"],
 };
 
 export const aboutTabs = {
